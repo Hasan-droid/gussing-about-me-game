@@ -1,5 +1,9 @@
 # gussing-about-me-game
 ##  **Synopsis**
+**Worked on by Maryam Al-Eisah & Hasan Baydoun**
+* Hasan Baydoun as a Navigator
+* Maryam Al-Eisah as a Driver
+
 this website is a game to push the users to guess some facts about the author in order to let them know about the author in intertaining way
 
 

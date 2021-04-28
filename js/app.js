@@ -35,11 +35,6 @@ authorStatus1=prompt("author is married ");
 graduationYears=prompt("author graduate in 2015 ");
  graduation(graduationYears);
 
-
-
-
-
-
  movies(top10s);
 
 function authorName_Age(userName)
