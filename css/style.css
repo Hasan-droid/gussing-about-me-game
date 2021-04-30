@@ -3,6 +3,7 @@ h1{
 }
 body
 {
+    margin: 20px;
     background-color: burlywood;
     color:darkslategray;
     font-size: 18px;
