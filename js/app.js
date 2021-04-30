@@ -23,9 +23,6 @@ let quesition="which of the next movies were the author's favorite \n,"+
   "-justice leag \n"+
   "-Casino"
   authorName_Age(userName1);
-
- ageNumbers=prompt("how was the author age ? you 4 attempts to guess")
-  author_Age(ageNumbers);
  authorCity=prompt("author born in syria");
   author_City(authorCity);
  authorUnvirsitys=prompt("author's unviersity was standford university");
@@ -34,25 +31,27 @@ authorStatus1=prompt("author is married ");
  author_Status(authorStatus1);
 graduationYears=prompt("author graduate in 2015 ");
  graduation(graduationYears);
+ ageNumbers=prompt("how was the author age ? you 4 attempts to guess")
+ author_Age(ageNumbers);
 
- movies(top10s);
+  movies(top10s);
 
 function authorName_Age(userName)
 {
   if(userName.toLowerCase()=="hasan")
 {alert("ohh we have the same name !!")
-alert("hello "+ userName +" you going to answer next 5 qusetions with yes or no");
+alert("hello "+ userName +"\n you're going to answer next 5 qusetions with yes or no (y or n)");
 authorAge=prompt("Author age was 25");
-  if(authorAge.toLowerCase()=="no")
+  if(authorAge.toLowerCase()=="no" || authorAge.toLowerCase()=="n")
 {
     alert('Correct');
      totalCorrectAnswers++
-   // console.log("Age answered correct")
+  
 }
-  else if(authorAge.toLowerCase()=="yes")
+  else if(authorAge.toLowerCase()=="yes"|| authorAge.toLowerCase()=="n")
 {
     alert("Wrong");
-   // console.log("Age answered wrong")
+
 }
 
 }
@@ -60,16 +59,16 @@ else
 {
     alert("hello "+ userName +" you going to answer next 5 qusetions with yes or no");
    authorName=prompt("author name was omar");
-   if(authorName.toLowerCase()=="no")
+   if(authorName.toLowerCase()=="no" || authorName.toLowerCase()=="n")
 {
     alert(' correct');
     totalCorrectAnswers++;
-   // console.log("Name answered correct")
+  
 }
-else if (authorName.toLowerCase() =="yes")
+else if (authorName.toLowerCase() =="yes"|| authorName.toLowerCase() =="y")
 {
     alert("wrong");
-  //  console.log("Name answered wrong")
+ 
 }
 
 }
@@ -82,16 +81,16 @@ else if (authorName.toLowerCase() =="yes")
 
 function author_City(authorBornCity){
 
-  if(authorBornCity.toLowerCase()=="yes")
+  if(authorBornCity.toLowerCase()=="yes" || authorBornCity.toLowerCase()=="y")
 {
     alert("correct")
     totalCorrectAnswers++;
-   // console.log("City of Born answered correct")
+ 
 }
-else if(authorBornCity.toLowerCase()=="no")
+else if(authorBornCity.toLowerCase()=="no" || authorBornCity.toLowerCase()=="n")
 {
     alert("Wrong");
-   // console.log("City of Born answered Wrong")
+  
 }
 
 }
@@ -100,16 +99,16 @@ else if(authorBornCity.toLowerCase()=="no")
 
 function author_unvirsity(authorUnvirsity){
 
-  if(authorUnvirsity.toLowerCase()=="yes")
+  if(authorUnvirsity.toLowerCase()=="yes" || authorUnvirsity.toLowerCase()=="y")
 {
     alert("wrong")
-  //  console.log("Unvirsity answered wrong")
+ 
 }
-else if(authorUnvirsity.toLowerCase()=="no")
+else if(authorUnvirsity.toLowerCase()=="no" || authorUnvirsity.toLowerCase()=="n")
 {
     alert("correct");
     totalCorrectAnswers++;
-  //  console.log("Unvirsity answered correct")
+ 
 } 
 
 }
@@ -119,17 +118,17 @@ else if(authorUnvirsity.toLowerCase()=="no")
 function author_Status(authorStatus)
 {
 
-  if(authorStatus.toLowerCase()=="yes")
+  if(authorStatus.toLowerCase()=="yes" || authorStatus.toLowerCase()=="y")
 {
     alert("wrong")
     
-    //console.log("Social status answered wrong")
+  
 }
-else if(authorStatus.toLowerCase()=="no")
+else if(authorStatus.toLowerCase()=="no" || authorStatus.toLowerCase()=="n")
 {
     alert("correct");
     totalCorrectAnswers++;
-   // console.log("Social status answered correct")
+  
 }
 
 }
@@ -139,16 +138,16 @@ else if(authorStatus.toLowerCase()=="no")
 function graduation(graduationYear)
 {
 
-  if(graduationYear.toLowerCase()=="yes")
+  if(graduationYear.toLowerCase()=="yes" || graduationYear.toLowerCase()=="y")
 {
     alert("wrong")
-   // console.log("Graduation year answered wrong")
+  
 }
-else if(graduationYear.toLowerCase()=="no")
+else if(graduationYear.toLowerCase()=="no" || graduationYear.toLowerCase()=="n")
 {
     alert("correct");
     totalCorrectAnswers++;
-   // console.log("Graduation year answered correct")
+   
 }
 
 }
@@ -214,9 +213,9 @@ answerState=false
 if(answerState)
 {
 alert(top10[j]+" is a correct answer");
-console.log(j)
 correctAnswer++;
-alert(3-correctAnswer+" left to guess")
+ 
+break;
 }
 else{
 alert(favMovie+" is a wrong answer")
@@ -228,7 +227,7 @@ gussing++;
 favMovie=prompt(quesition);
 
 }
-totalCorrectAnswers+=correctAnswer+1;
+totalCorrectAnswers+=correctAnswer;
 
 
 if(gussing>2)
@@ -237,7 +236,11 @@ if(gussing>2)
 alert(" you have completed all your attemps , hard luck")
 }
 else
-alert("Good Job you have gussed all the movies correctly")
+alert("Good Job you have gussed one of the movies correctly ,"+
+" \n the correct movies were :"+
+"\n -Godfather"+
+"\n -Godfellas"+
+"\n -Casino")
    }
  
 
